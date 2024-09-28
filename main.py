@@ -35,5 +35,9 @@ async def flipcoin(ctx):
 @bot.command()
 async def howprocents(ctx):
     await ctx.send(howprocent())
+    
+@bot.command()
+async def choose(ctx, *choices: str):
+    await ctx.send(random.choice(choices))    
      
 bot.run('Токен сюда')
